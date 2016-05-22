@@ -7,7 +7,7 @@ before_script:
     - chmod +x ./Test.sh
 
 script:
- - travis_wait 10 Travis/Test.sh
+ - travis_wait 10 ./Test.sh
 
 after_success:
     - Successful completion!
