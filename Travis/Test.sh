@@ -42,7 +42,7 @@ echo "* Change build number *"
 echo "********************************"
 echo ""
 
-/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $TRAVIS_BUILD_NUMBER" "$PWD/Travis/Info.plist"
+/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $TRAVIS_BUILD_NUMBER" "$PWD/Info.plist"
 echo "New build number - $TRAVIS_BUILD_NUMBER"
 
 echo ""
