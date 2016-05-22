@@ -51,6 +51,7 @@ echo "* Commit and push *"
 echo "********************************"
 echo ""
 
+
 git add $PWD/Info.plist
 git commit -m "Increase build number to $TRAVIS_BUILD_NUMBER by Travis CI [ci skip]"
 git push travisci $TRAVIS_BRANCH:$TRAVIS_BRANCH
