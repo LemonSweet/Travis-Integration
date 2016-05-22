@@ -2,16 +2,10 @@ language: swift
 
 osx_image: xcode7.3
 
-before_install:
-    - gem install gym
-    - export LANG=en_US.UTF-8
-    - rvm use system
-    - sudo gem install cocoapods -v '0.39.0' --no-ri --no-rdoc
-    - sudo gem install xcpretty -N --no-ri --no-rdo
-
-
+before_script:
+    - cd Travis
 script:
-    - travis_wait 60 ./Travis/Scripts/Test.sh
+    - travis_wait 60 ./Travis/Test.sh
 
 after_success:
     - Successful completion!
