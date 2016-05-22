@@ -1,0 +1,30 @@
+language: swift
+
+osx_image: xcode7.3
+
+before_install:
+    - gem install gym
+    - export LANG=en_US.UTF-8
+    - rvm use system
+    - sudo gem install cocoapods -v '0.39.0' --no-ri --no-rdoc
+    - sudo gem install xcpretty -N --no-ri --no-rdo
+
+
+script:
+    - travis_wait 60 ./Travis/Scripts/Test.sh
+
+after_success:
+    - Successful completion!
+
+branches:
+    only:
+        - master
+install:
+    - travis_wait 20 pod install
+
+notifications:
+    email:
+        recipients:
+            - aynur.galiev@flatstack.com
+    on_success: always
+    on_failure: always
